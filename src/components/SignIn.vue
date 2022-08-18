@@ -15,7 +15,7 @@ import { storeToRefs } from "pinia";
 
 // Route Variables
 const route = "/auth/sign-up";
-const buttonText = "Test the Sign Up Route";
+const buttonText = "Test the SignUp Route";
 
 // Input Fields
 const email = ref("");

@@ -6,7 +6,7 @@
 </template>
 
 <script setup>
-mport { ref, computed } from "vue";
+import { ref, computed } from "vue";
 import PersonalRouter from "./PersonalRouter.vue";
 import { supabase } from "../supabase";
 import { useRouter } from "vue-router";
@@ -15,7 +15,7 @@ import { storeToRefs } from "pinia";
 
 // Route Variables
 const route = "/auth/login";
-const buttonText = "Test the SignUp In Route";
+const buttonText = "Test the SignIn Route";
 
 // Input Fields
 const email = ref("");
