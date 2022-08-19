@@ -14,7 +14,6 @@
       type="password"
       v-model="password"
       placeholder="************"
-      required
     /><br />
     <input type="submit" value="Sign In" />
   </form>
@@ -53,12 +52,13 @@ const hidePassword = ref(true);
 const redirect = useRouter();
 
 // Arrow function to Signin user to supaBase
-const signIn = async () => {
+/* const signIn = async () => {
   try {
     // calls the user store and send the users info to backend to logIn
     await useUserStore().signIn(email.value, password.value);
-    // redirects user to the homeView
-    redirect.push({ path: "/" });
+      // redirects user to the homeView
+      redirect.push({ path: "/" });
+    }
   } catch (error) {
     // displays error message
     errorMsg.value = `Error: ${error.message}`;
@@ -67,7 +67,7 @@ const signIn = async () => {
       errorMsg.value = null;
     }, 5000);
   }
-};
+}; */
 </script>
 
 <style>
