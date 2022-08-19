@@ -46,6 +46,7 @@ npm run build
 # UPDATES:
 
 <hr>
+
 ## Thursday August 18, 2022
 
 We have fixed the router, and now we can access all routes.
@@ -53,3 +54,5 @@ We have fixed the router, and now we can access all routes.
 We have implemented the SignIn function inside the User.js Store.
 
 The next step is to create the LogIn.vue component form so we can test the Supabase DB calls.
+
+## Thursday August 19, 2022

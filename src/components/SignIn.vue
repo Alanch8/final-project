@@ -1,8 +1,27 @@
 <template>
-  <div>Sign In</div>
-  <PersonalRouter :route="route" :buttonText="buttonText" />
-  <p>Time to build up the Final Project!</p>
-  <p class="wu-text">Wu Tang Forever</p>
+  <h1>Log In to TaskApp</h1>
+  <p>Start Organizing your tasks today!</p>
+  <form @submit.prevent="signIn">
+    <label for="email">Email</label><br />
+    <input
+      type="text"
+      v-model="email"
+      placeholder="example@test.com"
+      required
+    /><br />
+    <label for="password">Password</label><br />
+    <input
+      type="password"
+      v-model="password"
+      placeholder="************"
+      required
+    /><br />
+    <input type="submit" value="Sign In" />
+  </form>
+  <p>
+    <span>Don't have an account?</span
+    ><PersonalRouter :route="route" :buttonText="buttonText" />
+  </p>
 </template>
 
 <script setup>
@@ -15,7 +34,7 @@ import { storeToRefs } from "pinia";
 
 // Route Variables
 const route = "/auth/sign-up";
-const buttonText = "Test the SignUp Route";
+const buttonText = "Sign Up";
 
 // Input Fields
 const email = ref("");

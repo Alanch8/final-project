@@ -27,5 +27,6 @@ export const useTaskStore = defineStore("tasks", {
         },
       ]);
     },
+    //We have to define the next actions as readTask, editTask, deleteTask,
   },
 });
