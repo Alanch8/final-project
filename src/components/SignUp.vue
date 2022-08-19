@@ -4,25 +4,31 @@
   <form @submit.prevent="signUp">
     <label for="email">Email</label><br />
     <input
-      type="text"
+      type="email"
       v-model="email"
       placeholder="example@taskapp.com"
-    /><br />
-    {{ email }}{{ password }} {{ confirmPassword
-    }}<label for="password">Password</label><br />
+      required
+    />
+    <br />
+    <label for="password">Password</label><br />
     <input
       type="password"
       v-model="password"
       placeholder="************"
-    /><br />
+      required
+    />
+    <br />
     <label for="password">Confirm Password</label><br />
     <input
       type="password"
       v-model="confirmPassword"
       placeholder="************"
-    /><br />
+      required
+    />
+    <!-- comentasr en el tecnical challenge lo del require no seguro blabla en el front -->
+    <br />
     <input type="submit" value="Sign Up" />
-    <p v-if="errorMsg">{{ errorMsg }}</p>
+    <p v-if="errorMsg" class="errorMsg" id="Test">{{ errorMsg }}</p>
   </form>
   <p>
     <span>Have an account?</span
@@ -80,9 +86,16 @@ const signUp = async () => {
       }, 5000);
     }
   } else {
-    errorMsg.value = "Las contraseñas no coinciden";
+    errorMsg.value = "Error: Passwords do not match";
+    setTimeout(() => {
+      errorMsg.value = null;
+    }, 5000);
   }
 };
 </script>
 
-<style></style>
+<style>
+.errorMsg {
+  color: red;
+}
+</style>

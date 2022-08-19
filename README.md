@@ -56,3 +56,11 @@ We have implemented the SignIn function inside the User.js Store.
 The next step is to create the LogIn.vue component form so we can test the Supabase DB calls.
 
 ## Thursday August 19, 2022
+
+The first thing we have done is to try to understand all the logic of Supabase.
+
+We have created the necessary fields for the Profiles table within Supabase.
+
+We have implemented some features in SignUp.vue.
+
+The next steps are to finish connecting our app with supabase to be able to create new users and to be able to login correctly.
