@@ -10,11 +10,15 @@
       required
     /><br />
     <label for="password">Password</label><br />
-    <input
-      type="password"
-      v-model="password"
-      placeholder="************"
-    /><br />
+    <div>
+      <input
+        :type="passwordFieldType"
+        v-model="password"
+        placeholder="************"
+        required
+      /><span @click="changeHidePasswordValue">ojo</span>
+    </div>
+    <br />
     <input type="submit" value="Sign In" />
   </form>
   <p>
@@ -42,23 +46,33 @@ const password = ref("");
 // Error Message
 const errorMsg = ref("");
 
-//Show hide password variables
+// Show hide confrimPassword variable
+const hidePassword = ref(true);
+
+// Change hidePassword value
+const changeHidePasswordValue = () => {
+  if (hidePassword.value === true) {
+    hidePassword.value = false;
+  } else {
+    hidePassword.value = true;
+  }
+};
+
+// Show hide password variable
 const passwordFieldType = computed(() =>
   hidePassword.value ? "password" : "text"
 );
-const hidePassword = ref(true);
 
 // Router to push user once SignedIn to the HomeView
 const redirect = useRouter();
 
 // Arrow function to Signin user to supaBase
-/* const signIn = async () => {
+const signIn = async () => {
   try {
     // calls the user store and send the users info to backend to logIn
     await useUserStore().signIn(email.value, password.value);
-      // redirects user to the homeView
-      redirect.push({ path: "/" });
-    }
+    // redirects user to the homeView
+    redirect.push({ path: "/" });
   } catch (error) {
     // displays error message
     errorMsg.value = `Error: ${error.message}`;
@@ -67,7 +81,9 @@ const redirect = useRouter();
       errorMsg.value = null;
     }, 5000);
   }
-}; */
+};
+
+// Styles
 </script>
 
 <style>

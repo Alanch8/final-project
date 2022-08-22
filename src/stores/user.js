@@ -21,7 +21,6 @@ export const useUserStore = defineStore("user", {
       if (error) throw error;
     },
     async signIn(email, password) {
-      debugger;
       console.log(email, password);
       const { user, error } = await supabase.auth.signIn({
         email: email,
@@ -34,6 +33,18 @@ export const useUserStore = defineStore("user", {
         console.log(this.user);
       }
       if (error) throw error;
+    },
+    async signOut() {
+      const { error } = await supabase.auth.signOut();
+    },
+    persist: {
+      enabled: true,
+      strategies: [
+        {
+          key: "user",
+          storage: localStorage,
+        },
+      ],
     },
   },
 });

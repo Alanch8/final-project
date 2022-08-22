@@ -28,7 +28,7 @@
     <!-- comentasr en el tecnical challenge lo del require no seguro blabla en el front -->
     <br />
     <input type="submit" value="Sign Up" />
-    <p v-if="errorMsg" class="errorMsg" id="Test">{{ errorMsg }}</p>
+    <p v-if="errorMsg" class="errorMsg">{{ errorMsg }}</p>
   </form>
   <p>
     <span>Have an account?</span
@@ -56,20 +56,30 @@ const confirmPassword = ref("");
 // Error Message
 const errorMsg = ref("");
 
+/* // Show hide confrimPassword variable
+const hidePassword = ref(true);
+
+// Change hidePassword value
+const changeHidePasswordValue = () => {
+  if (hidePassword.value === true) {
+    hidePassword.value = false;
+  } else {
+    hidePassword.value = true;
+  }
+};
+
 // Show hide password variable
 const passwordFieldType = computed(() =>
   hidePassword.value ? "password" : "text"
-);
-// Show hide confrimPassword variable
-const hidePassword = ref(true);
+); */
 
 // Router to push user once SignedUp to Log In
 const redirect = useRouter();
-// Arrow function to SignUp user to supaBase with a timeOut() method for showing the error
 const checkPass = () => {
   return password.value === confirmPassword.value ? true : false;
 };
 
+// Arrow function to SignUp user to supaBase with a timeOut() method for showing the error
 const signUp = async () => {
   if (checkPass()) {
     try {

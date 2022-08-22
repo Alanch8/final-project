@@ -33,4 +33,6 @@ onMounted(async () => {
   </div>
 </template>
 
-<style></style>
+<style>
+/* Import here Roboto font from google */
+</style>

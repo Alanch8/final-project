@@ -1,8 +1,11 @@
 <template>
-  <div>hello</div>
+  <Nav />
 </template>
 
-<script setup></script>
+<script setup>
+import { ref } from "vue";
+import Nav from "../components/Nav.vue";
+</script>
 
 <style></style>
 
