@@ -25,7 +25,6 @@
       placeholder="************"
       required
     />
-    <!-- comentasr en el tecnical challenge lo del require no seguro blabla en el front -->
     <br />
     <input type="submit" value="Sign Up" />
     <p v-if="errorMsg" class="errorMsg">{{ errorMsg }}</p>
@@ -56,25 +55,10 @@ const confirmPassword = ref("");
 // Error Message
 const errorMsg = ref("");
 
-/* // Show hide confrimPassword variable
-const hidePassword = ref(true);
-
-// Change hidePassword value
-const changeHidePasswordValue = () => {
-  if (hidePassword.value === true) {
-    hidePassword.value = false;
-  } else {
-    hidePassword.value = true;
-  }
-};
-
-// Show hide password variable
-const passwordFieldType = computed(() =>
-  hidePassword.value ? "password" : "text"
-); */
-
 // Router to push user once SignedUp to Log In
 const redirect = useRouter();
+
+// CheckPass function
 const checkPass = () => {
   return password.value === confirmPassword.value ? true : false;
 };

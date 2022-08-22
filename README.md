@@ -65,4 +65,8 @@ The next steps are to finish connecting our app with supabase to be able to crea
 
 ## Monday August 22, 2022
 
-Implementation of the eye hide and show password system.
+We have implemented the necessary system to show and hide the passwords in the LogIn. (Eye system).
+
+We have created the Nav component in which we paint the user's name from the email and use a button to LogOut with all its logic.
+
+We have added the CRUD functions to the Task Store.

@@ -5,11 +5,7 @@
       <div>
         <ul>
           <li>
-            <!--  <p>Welcome back {{ userEmail }}</p> -->
-            <p>
-              Welcome back {{ user }} que le encanta complicarse mentalmente! tq
-              bro es joda :)
-            </p>
+            <p>Welcome back {{ user }}</p>
           </li>
           <li>
             <button @click="logout">Log Out</button>
@@ -28,14 +24,11 @@ import { useUserStore } from "../stores/user";
 //constant to save a variable that will hold the use router method
 const redirect = useRouter();
 
+// constant that calls user email from the useUSerStore
 // constant to save a variable that will get the user from store with a computed function imported from vue
 const user = computed(() => useUserStore().$state.user.email.split("@")[0]);
-
-const userEmail = user.value.split("@")[0];
-
-// constant that calls user email from the useUSerStore
-
 // constant that saves the user email and cleans out the @client from the user
+const userEmail = user.value.split("@")[0];
 
 // async function that calls the signOut method from the useUserStore and pushes the user back to the Auth view.
 // Logout function
@@ -46,9 +39,6 @@ const logout = async () => {
 </script>
 
 <style>
-nav {
-  display: flex;
-}
 ul {
   list-style-type: none;
   margin: 0;
