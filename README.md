@@ -70,3 +70,9 @@ We have implemented the necessary system to show and hide the passwords in the L
 We have created the Nav component in which we paint the user's name from the email and use a button to LogOut with all its logic.
 
 We have added the CRUD functions to the Task Store.
+
+## Thuesday August 23, 2022
+
+We have added the Moment.js library to automate dates and times.
+
+We have created all the logic to be able to paint tasks and update home automatically.

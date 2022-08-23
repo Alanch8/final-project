@@ -5,15 +5,18 @@
     <div><a href="/">TaskApp</a></div>
     <div>
       <p>
-        © {2022} TaskApp. All rights reserved. Built with ❤️ and ☕️ by Aitor
-        Lancharro
+        © {{ time }} TaskApp. All rights reserved. Built with ❤️ and ☕️ by
+        Aitor Lancharro.
       </p>
     </div>
   </div>
 </template>
 
 <script setup>
+import moment from "moment";
+
 // Function to change the year automatically.
+const time = moment().format("YYYY");
 </script>
 
 <style></style>

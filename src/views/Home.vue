@@ -1,38 +1,38 @@
 <template>
   <Nav />
   <NewTask @childEmitTask="addTask" />
+  <TaskItem v-for="task in useTaskStore().tasks" :key="task.id" :item="task" />
   <Footer />
 </template>
 
 <script setup>
-import { ref } from "vue";
+//import { ref } from "vue";
+import { onMounted } from "vue";
 import Nav from "../components/Nav.vue";
 import NewTask from "../components/NewTask.vue";
+import TaskItem from "../components/TaskItem.vue";
 import Footer from "../components/Footer.vue";
 import { useTaskStore } from "../stores/task";
 
 // Tasks array
-const tasks = [];
+//const tasks = ref([]);
 
 // Fetching Tasks
-const fetchTasks = async () => {
-  tasks = await useTaskStore().fetchTasks();
+/* const fetchTasks = async () => {
+  tasks.value = await useTaskStore().fetchTasks();
   console.log(tasks);
 };
+fetchTasks(); */
 
 // addTask function
-const addTask = async (task) => {
-  try {
-    await useTaskStore().addTask(task.title, task.description);
-  } catch (error) {
-    // displays error message
-    errorMsg.value = `Error: ${error.message}`;
-    // hides error message
-    setTimeout(() => {
-      errorMsg.value = null;
-    }, 5000);
-  }
+const addTask = async (newTask) => {
+  const res = await useTaskStore().addTask(newTask.title, newTask.description);
+  useTaskStore().fetchTasks();
 };
+
+onMounted(() => {
+  useTaskStore().fetchTasks();
+});
 </script>
 
 <style></style>

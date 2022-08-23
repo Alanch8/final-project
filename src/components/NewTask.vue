@@ -3,7 +3,7 @@
     <h2>Add a new Task</h2>
     <p>Keep your life organized, prepare for a trip? Start here!</p>
     <!-- Change the date everyday -->
-    <p>Today's Date is {Aug 22nd 2022}</p>
+    <p>Today's Date is {{ time }}</p>
     <div>
       <input
         type="text"
@@ -26,6 +26,7 @@
 
 <script setup>
 import { ref } from "vue";
+import moment from "moment";
 
 // constant to save a variable that define the custom event that will be emitted to the homeView
 const emit = defineEmits(["childEmitTask"]);
@@ -59,6 +60,8 @@ const getInfo = async () => {
     }, 5000);
   }
 };
+
+const time = moment().format("MMM Do YYYY");
 
 // Diego's Aprroach
 /* const emptyContainer = ref(false);

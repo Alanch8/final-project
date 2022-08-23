@@ -1,11 +1,23 @@
 <template>
-  <div>Task Item Component</div>
+  <div>
+    <h1>{{ item.title }}</h1>
+    <h2>{{ item.description }}</h2>
+  </div>
 </template>
 
 <script setup>
-const emit = defineEmits(["homeView", "deleteStatus", "toggleStatus"]);
+const emit = defineEmits([
+  "childEditStatus",
+  "childDeleteStatus",
+  "childToggleStatus",
+]);
 
-const props = defineProps({"ENTER-PROP-HERE"});
+/* const props = defineProps({item: Array}); */
+const props = defineProps(["item"]);
+
+// Pasamos como objeto mediante props toda la información del item a su padre.
+// Segmentamos la definición de props como objetos para expandir el uso del mismo prop. Ej: item en este caso representa un array que contiene el titulo, la desciprcion, y el valor booleanico de la tarea.
+
 // Variables
 const booleanValue = false;
 const errorMsg = "";
