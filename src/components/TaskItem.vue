@@ -1,11 +1,31 @@
 <template>
   <div>
-    <h1>{{ item.title }}</h1>
-    <h2>{{ item.description }}</h2>
+    <div>
+      <h1>{{ item.title }}</h1>
+      <h2>{{ item.description }}</h2>
+    </div>
+    <div>
+      <i class="fa-solid fa-check"></i>
+    </div>
+    <div>
+      <i class="fa-solid fa-edit"></i>
+    </div>
+    <div>
+      <i class="fa-solid fa-trash"></i>
+    </div>
+    <div v-if="editTask">
+      <div>
+        <div><input type="text" placeholder="Edit Title" /></div>
+        <div><input type="text" placeholder="Edit Description" /></div>
+        <button @click="editTask">Edit</button>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
+import { ref } from "vue";
+
 const emit = defineEmits([
   "childEditStatus",
   "childDeleteStatus",
@@ -15,25 +35,16 @@ const emit = defineEmits([
 /* const props = defineProps({item: Array}); */
 const props = defineProps(["item"]);
 
-// Pasamos como objeto mediante props toda la información del item a su padre.
-// Segmentamos la definición de props como objetos para expandir el uso del mismo prop. Ej: item en este caso representa un array que contiene el titulo, la desciprcion, y el valor booleanico de la tarea.
+const isComplete = ref(false);
 
-// Variables
-const booleanValue = false;
-const errorMsg = "";
-const task = {
-  title: "",
-  description: "",
+const deleteTask = (id) => {
+  const taskToDelete = props.tasks.filter((task) => task.id === id);
+  emit("childDeleteStatus", taskToDelete[0]);
 };
 
-// Used to edit task details
-const inputFIeld = false;
-
-// Function to handle the error
-// ??
-
-// Function to handle the edit dialogue
-const editDialogue = () => {};
+const toggleTask = () => {
+  isComplete.value = !isComplete.value;
+};
 </script>
 
 <style></style>

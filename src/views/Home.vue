@@ -25,14 +25,13 @@ import { useTaskStore } from "../stores/task";
 fetchTasks(); */
 
 // addTask function
+
+useTaskStore().fetchTasks();
+
 const addTask = async (newTask) => {
   const res = await useTaskStore().addTask(newTask.title, newTask.description);
   useTaskStore().fetchTasks();
 };
-
-onMounted(() => {
-  useTaskStore().fetchTasks();
-});
 </script>
 
 <style></style>

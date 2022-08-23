@@ -76,3 +76,9 @@ We have added the CRUD functions to the Task Store.
 We have added the Moment.js library to automate dates and times.
 
 We have created all the logic to be able to paint tasks and update home automatically.
+
+Logic for eliminating tasks.
+
+Logic for editing tasks.
+
+Logic for completing/incompleting tasks.
