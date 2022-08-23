@@ -27,7 +27,7 @@
     />
     <br />
     <input type="submit" value="Sign Up" />
-    <p v-if="errorMsg" class="errorMsg">{{ errorMsg }}</p>
+    <p v-if="errorMsg" class="errorMsg">{{ errorMsg }}.</p>
   </form>
   <p>
     <span>Have an account?</span

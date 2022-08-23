@@ -13,6 +13,7 @@
         </ul>
       </div>
     </div>
+    <hr />
   </nav>
 </template>
 

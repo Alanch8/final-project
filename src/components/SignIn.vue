@@ -20,7 +20,7 @@
     </div>
     <br />
     <input type="submit" value="Sign In" />
-    <p v-if="errorMsg" class="errorMsg">{{ errorMsg }}</p>
+    <p v-if="errorMsg" class="errorMsg">{{ errorMsg }}.</p>
   </form>
   <p>
     <span>Don't have an account?</span

@@ -3,11 +3,25 @@
 </template>
 
 <script setup>
-// const emit = defineEmits([
-//   ENTER-EMITS-HERE
-// ])
+const emit = defineEmits(["homeView", "deleteStatus", "toggleStatus"]);
 
-// const props = defineProps(["ENTER-PROP-HERE"]);
+const props = defineProps({"ENTER-PROP-HERE"});
+// Variables
+const booleanValue = false;
+const errorMsg = "";
+const task = {
+  title: "",
+  description: "",
+};
+
+// Used to edit task details
+const inputFIeld = false;
+
+// Function to handle the error
+// ??
+
+// Function to handle the edit dialogue
+const editDialogue = () => {};
 </script>
 
 <style></style>
