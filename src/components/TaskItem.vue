@@ -4,46 +4,75 @@
       <h1>{{ item.title }}</h1>
       <h2>{{ item.description }}</h2>
     </div>
-    <div>
-      <i class="fa-solid fa-check"></i>
+    <div v-if="showEditOptions">
+      <form @submit.prevent="editTask">
+        <div>
+          <input type="text" placeholder="Edit Title" v-model="taskTitle" />
+        </div>
+        <div>
+          <input
+            type="text"
+            placeholder="Edit Description"
+            v-model="taskDescription"
+          />
+        </div>
+        <input type="submit" value="Edit" />
+      </form>
     </div>
     <div>
-      <i class="fa-solid fa-edit"></i>
-    </div>
-    <div>
-      <i class="fa-solid fa-trash"></i>
-    </div>
-    <div v-if="editTask">
       <div>
-        <div><input type="text" placeholder="Edit Title" /></div>
-        <div><input type="text" placeholder="Edit Description" /></div>
-        <button @click="editTask">Edit</button>
+        <i class="fa-solid fa-check" @click="completedTask"></i>
+        <p v-if="!isCompleted">Not Done</p>
+        <p v-else>Done</p>
+      </div>
+      <div>
+        <i class="fa-solid fa-edit" @click="showEdit"></i>
+      </div>
+      <div>
+        <i class="fa-solid fa-trash" @click="deleteTask"></i>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, defineProps } from "vue";
+
+const taskTitle = ref("");
+const taskDescription = ref("");
+
+const showEditOptions = ref(false);
+
+const isCompleted = ref(false);
 
 const emit = defineEmits([
   "childEditStatus",
-  "childDeleteStatus",
   "childToggleStatus",
+  "childDeleteStatus",
 ]);
 
 /* const props = defineProps({item: Array}); */
 const props = defineProps(["item"]);
 
-const isComplete = ref(false);
-
-const deleteTask = (id) => {
-  const taskToDelete = props.tasks.filter((task) => task.id === id);
-  emit("childDeleteStatus", taskToDelete[0]);
+const showEdit = () => {
+  showEditOptions.value = !showEditOptions.value;
+};
+const editTask = () => {
+  const newTask = {
+    title: taskTitle.value,
+    description: taskDescription.value,
+    id: props.item.id,
+  };
+  emit("childEditStatus", newTask);
+  (taskTitle.value = ""), (taskDescription.value = "");
 };
 
-const toggleTask = () => {
-  isComplete.value = !isComplete.value;
+const completedTask = (id) => {
+  isCompleted.value = !isCompleted.value;
+  emit("childToggleStatus", props.item.id);
+};
+const deleteTask = () => {
+  emit("childDeleteStatus", props.item.id);
 };
 </script>
 

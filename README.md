@@ -82,3 +82,9 @@ Logic for eliminating tasks.
 Logic for editing tasks.
 
 Logic for completing/incompleting tasks.
+
+## Wednesday August 24, 2022
+
+We add the CSS Tailwind library.
+
+We have styled the LogIn and Signin pages.
