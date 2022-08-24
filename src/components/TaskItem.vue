@@ -22,7 +22,7 @@
     <div>
       <div>
         <i class="fa-solid fa-check" @click="completedTask"></i>
-        <p v-if="!isCompleted">Not Done</p>
+        <p v-if="!item.is_complete">Not Done</p>
         <p v-else>Done</p>
       </div>
       <div>
@@ -42,8 +42,6 @@ const taskTitle = ref("");
 const taskDescription = ref("");
 
 const showEditOptions = ref(false);
-
-const isCompleted = ref(false);
 
 const emit = defineEmits([
   "childEditStatus",
@@ -68,9 +66,9 @@ const editTask = () => {
 };
 
 const completedTask = (id) => {
-  isCompleted.value = !isCompleted.value;
   emit("childToggleStatus", props.item.id);
 };
+
 const deleteTask = () => {
   emit("childDeleteStatus", props.item.id);
 };

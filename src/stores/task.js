@@ -15,6 +15,15 @@ export const useTaskStore = defineStore("tasks", {
       this.tasks = tasks;
       return this.tasks;
     },
+    async fetchComplete(id) {
+      const { data: task, error } = await supabase
+        .from("tasks")
+        .select("is_complete")
+        .match({
+          id: id,
+        });
+      return task[0].is_complete;
+    },
     async addTask(title, description) {
       console.log(useUserStore().user.id);
       const { data, error } = await supabase.from("tasks").insert([
@@ -45,7 +54,7 @@ export const useTaskStore = defineStore("tasks", {
     async completedTask(id, booleanValue) {
       const { data, error } = await supabase
         .from("tasks")
-        .update({ is_complete: booleanValue })
+        .update({ is_complete: !booleanValue })
         .match({
           id: id,
         });

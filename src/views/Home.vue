@@ -1,14 +1,15 @@
 <template>
   <Nav />
-  <NewTask @childEmitTask="addTask" />
+  <NewTask @childEmitItem="addTask" />
   <TaskItem
     v-for="task in useTaskStore().tasks"
     :key="task.id"
     :item="task"
-    @childToggleStatus="completedTask"
+    @childToggleStatus="queryIsComplete"
     @childEditStatus="editTask"
     @childDeleteStatus="deleteTask"
-  />
+  >
+  </TaskItem>
   <Footer />
 </template>
 
@@ -33,15 +34,29 @@ fetchTasks(); */
 
 // addTask function
 
+// creo un query para traer el booleano me hace unb return del boleano
+
+/* const booleanValue = async (id) => {
+  useTaskStore().fetchComplete();
+}; */
+
+const queryIsComplete = async (id) => {
+  const AbooleanValue = await useTaskStore().fetchComplete(id);
+  //quitarluego
+  console.log(AbooleanValue);
+  completedTask(id, AbooleanValue);
+};
+
+//tecnical challenge: triple comunicacion para modificar un booleano.
+
 useTaskStore().fetchTasks();
 
 const addTask = async (newTask) => {
   const res = await useTaskStore().addTask(newTask.title, newTask.description);
   useTaskStore().fetchTasks();
 };
-const completedTask = async (id, booleanValue) => {
-  booleanValue = !booleanValue;
-  const res = await useTaskStore().completedTask(id, booleanValue);
+const completedTask = async (id, AbooleanValue) => {
+  const res = await useTaskStore().completedTask(id, AbooleanValue);
   useTaskStore().fetchTasks();
 };
 
