@@ -88,3 +88,5 @@ Logic for completing/incompleting tasks.
 We add the CSS Tailwind library.
 
 We have styled the LogIn and Signin pages.
+
+We have deployed the project in Vercel.
