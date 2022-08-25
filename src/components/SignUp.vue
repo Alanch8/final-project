@@ -62,7 +62,7 @@
                 ><PersonalRouter :route="route" :buttonText="buttonText" />
               </p>
               <div class="flex items-center justify-center my-10">
-                <img class="md:w-64" src="/public/signupwith.png" alt="" />
+                <img class="md:w-64" src="/signupwith.png" alt="" />
               </div>
               <div class="flex items-center justify-center">
                 <div

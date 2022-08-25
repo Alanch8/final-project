@@ -12,7 +12,7 @@
         <div class="w-1/2 mx-auto md:w-3/5 lg:w-1/2">
           <div class="max-w-sm mx-auto">
             <form @submit.prevent="signIn">
-              <div class="mb-4">
+              <div class="mb-2">
                 <label class="inputFieldLabel" for="email">Email</label>
                 <div>
                   <input
@@ -24,7 +24,7 @@
                   />
                 </div>
               </div>
-              <div class="w-full mb-4">
+              <div class="mb-2">
                 <label class="inputFieldLabel" for="password">Password</label>
                 <div class="relative flex flex-wrap items-stretch">
                   <input
@@ -35,7 +35,7 @@
                     placeholder="∙∙∙∙∙∙∙∙∙∙∙"
                     required
                   /><span
-                    class="z-10 h-full leading-snug font-normal text-center absolute bg-transparent rounded text-base items-center justify-center right-0 pr-4 py-6 opacity-25"
+                    class="z-10 h-full leading-snug font-normal text-center absolute bg-transparent rounded text-base items-center justify-center right-0 pr-4 py-4 opacity-25"
                     @click="changeHidePasswordValue"
                     ><i class="fa-solid fa-eye-slash"></i
                   ></span>
@@ -54,8 +54,8 @@
                   >Don't have an account?</span
                 ><PersonalRouter :route="route" :buttonText="buttonText" />
               </p>
-              <div class="flex items-center justify-center my-10">
-                <img class="md:w-64" src="/public/loginwith.png" alt="" />
+              <div class="flex items-center justify-center my-6">
+                <img class="w-64" src="/loginwith.png" alt="" />
               </div>
               <div class="flex items-center justify-center">
                 <div
