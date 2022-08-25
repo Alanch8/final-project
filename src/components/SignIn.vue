@@ -78,14 +78,12 @@
         src="https://images.unsplash.com/photo-1596638787647-904d822d751e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1900&q=80"
         alt="LogIn img"
       />
-      <div
-        class="credits absolute h-full z-10 right-0 text-white opacity-75 mx-5 my-5 py-5"
-      >
+      <div class="credits absolute h-full z-10 right-0 mx-5 my-5 py-5">
         <a
           class="flex items-center justify-center"
           href="https://unsplash.com/es/fotos/PP1yKpfA4HY"
-          ><i class="fa-brands fa-unsplash mx-2 shadow"></i>
-          <p class="shadow">Cristofer Maximilian</p></a
+          ><i class="fa-brands fa-unsplash mx-2 text-white"></i>
+          <p class="text-white opacity-75">Cristofer Maximilian</p></a
         >
       </div>
     </section>

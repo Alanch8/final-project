@@ -12,7 +12,7 @@
         <div class="w-1/2 mx-auto md:w-3/5 lg:w-1/2">
           <div class="max-w-sm mx-auto">
             <form @submit.prevent="signUp">
-              <div class="mb-4">
+              <div class="mb-2">
                 <label class="inputFieldLabel" for="email">Email</label>
                 <div>
                   <input
@@ -24,7 +24,7 @@
                   />
                 </div>
               </div>
-              <div class="w-full mb-4">
+              <div class="mb-2">
                 <label class="inputFieldLabel" for="password">Password</label>
                 <div>
                   <input
@@ -36,7 +36,7 @@
                   />
                 </div>
               </div>
-              <div class="w-full mb-4">
+              <div class="mb-2">
                 <div>
                   <label class="inputFieldLabel" for="password"
                     >Confirm Password</label
@@ -61,8 +61,8 @@
                 <span class="font-normal opacity-50 mr-2">Have an account?</span
                 ><PersonalRouter :route="route" :buttonText="buttonText" />
               </p>
-              <div class="flex items-center justify-center my-10">
-                <img class="md:w-64" src="/signupwith.png" alt="" />
+              <div class="flex items-center justify-center my-6">
+                <img class="w-64" src="/signupwith.png" alt="" />
               </div>
               <div class="flex items-center justify-center">
                 <div
@@ -85,14 +85,12 @@
         src="https://images.unsplash.com/photo-1596638787647-904d822d751e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1900&q=80"
         alt="LogIn img"
       />
-      <div
-        class="credits absolute h-full z-10 right-0 text-white opacity-75 mx-5 my-5 py-5"
-      >
+      <div class="credits absolute h-full z-10 right-0 mx-5 my-5 py-5">
         <a
           class="flex items-center justify-center"
           href="https://unsplash.com/es/fotos/PP1yKpfA4HY"
-          ><i class="fa-brands fa-unsplash mx-2 shadow"></i>
-          <p class="shadow">Cristofer Maximilian</p></a
+          ><i class="fa-brands fa-unsplash mx-2 text-white"></i>
+          <p class="text-white opacity-75">Cristofer Maximilian</p></a
         >
       </div>
     </section>
