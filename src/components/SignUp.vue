@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-min">
     <section class="flex items-center h-screen relative pt16 bg-white">
-      <div class="container animate__animated animate__fadeIn animate__slow">
+      <div class="container animate__animated animate__fadeIn">
         <div>
           <div class="mb-6 text-center">
             <h3 class="appTitle">Register to</h3>
@@ -81,7 +81,7 @@
         </div>
       </div>
       <img
-        class="baseImg md:top-0 md:right-0 mx-auto sm:h-full md:w-2/5 lg:w-1/2 md:object-cover animate__animated animate__fadeIn animate__slow"
+        class="baseImg md:top-0 md:right-0 mx-auto sm:h-full md:w-2/5 lg:w-1/2 md:object-cover"
         src="https://images.unsplash.com/photo-1596638787647-904d822d751e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1900&q=80"
         alt="LogIn img"
       />

@@ -1,16 +1,24 @@
 <template>
-  <Nav />
-  <NewTask @childEmitItem="addTask" />
-  <TaskItem
-    v-for="task in useTaskStore().tasks"
-    :key="task.id"
-    :item="task"
-    @childToggleStatus="queryIsComplete"
-    @childEditStatus="editTask"
-    @childDeleteStatus="deleteTask"
-  >
-  </TaskItem>
-  <Footer />
+  <div class="min-h-min">
+    <Nav />
+    <NewTask @childEmitItem="addTask" />
+    <div class="pt-4 bg-gray-100">
+      <div class="container mx-auto">
+        <section class="flex flex-wrap mt-10">
+          <TaskItem
+            v-for="task in useTaskStore().tasks"
+            :key="task.id"
+            :item="task"
+            @childToggleStatus="queryIsComplete"
+            @childEditStatus="editTask"
+            @childDeleteStatus="deleteTask"
+          >
+          </TaskItem>
+        </section>
+      </div>
+    </div>
+    <Footer />
+  </div>
 </template>
 
 <script setup>
