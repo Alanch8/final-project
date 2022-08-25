@@ -1,6 +1,7 @@
 <template>
   <h1>Log In to TaskApp</h1>
   <p>Start Organizing your tasks today!</p>
+  <h1 class="text-3xl font-bold underline text-blue-600">Hello Tailwind!</h1>
   <form @submit.prevent="signIn">
     <label for="email">Email</label><br />
     <input
