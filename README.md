@@ -90,3 +90,9 @@ We add the CSS Tailwind library.
 We have styled the LogIn and Signin pages.
 
 We have deployed the project in Vercel.
+
+## Thursday August 25, 2022
+
+We have styled the login and signin pages.
+
+We have styled the home page.
