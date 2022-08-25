@@ -14,7 +14,7 @@
     <input
       type="password"
       v-model="password"
-      placeholder="************"
+      placeholder="∙∙∙∙∙∙∙∙∙∙∙"
       required
     />
     <br />
@@ -22,7 +22,7 @@
     <input
       type="password"
       v-model="confirmPassword"
-      placeholder="************"
+      placeholder="∙∙∙∙∙∙∙∙∙∙∙"
       required
     />
     <br />

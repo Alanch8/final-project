@@ -1,56 +1,88 @@
 <template>
   <div class="min-h-min">
     <section class="flex items-center h-screen relative pt16 bg-white">
-      <div class="container px-4 mx-auto mb-16">
-        <div class="w-full md:w-3/5 lg:w-1/2 animate_animated animate_fadeIn">
+      <div class="container animate__animated animate__fadeIn">
+        <div>
+          <div class="mb-6 text-center">
+            <h3 class="appTitle">Log In to</h3>
+            <h2 class="appTitle-gradient">TaskApp</h2>
+            <p class="appSubtitle mb-10">Start Organizing your tasks today!</p>
+          </div>
+        </div>
+        <div class="w-1/2 mx-auto md:w-3/5 lg:w-1/2">
           <div class="max-w-sm mx-auto">
-            <div class="mb-6 text-center">
-              <h3 class="appTitle text-at-light-green font-black">
-                Log In to TaskApp
-              </h3>
-              <p class="appSubtitle">Start Organizing your tasks today!</p>
-            </div>
             <form @submit.prevent="signIn">
-              <div class="mb-6">
-                <label class="inputFieldLabel" for="email">Email</label>
-                <input
-                  class="inputField"
-                  type="email"
-                  v-model="email"
-                  placeholder="example@test.com"
-                  required
-                />
-              </div>
               <div class="mb-4">
-                <label class="inputFieldLabel" for="password">Password</label>
-                <div class="relative flex w-full flex-wrap items-stretch mb-3">
+                <label class="inputFieldLabel" for="email">Email</label>
+                <div>
                   <input
-                    class="inputField"
+                    class="inputField w-full appearance-none focus:outline-none"
+                    type="email"
+                    v-model="email"
+                    placeholder="example@taskapp.com"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="w-full mb-4">
+                <label class="inputFieldLabel w-full" for="password"
+                  >Password</label
+                >
+                <div class="relative flex flex-wrap items-stretch">
+                  <input
+                    class="inputField w-full appearance-none focus:outline-none"
                     :type="passwordFieldType"
                     v-model="password"
                     onpaste="return false"
-                    placeholder="************"
+                    placeholder="∙∙∙∙∙∙∙∙∙∙∙"
                     required
                   /><span
-                    class="z-10 h-full leading-snug font-normal text-center absolute bg-transparent rounded text-base items-center justify-center w-8 right-0 pr-3 py-3"
+                    class="z-10 h-full leading-snug font-normal text-center absolute bg-transparent rounded text-base items-center justify-center right-0 pr-4 py-6 opacity-25"
                     @click="changeHidePasswordValue"
-                    >ojo</span
-                  >
+                    ><i
+                      :class="
+                        hidePassword.value
+                          ? 'fa-solid fa-eye'
+                          : 'fa-solid fa-eye-slash'
+                      "
+                    ></i
+                  ></span>
                 </div>
               </div>
-              <button class="btnPrimary" type="submit">Sign In</button>
-              <!-- <input type="submit" value="Sign In" /> -->
+              <button
+                class="bg-at-light-green hover:bg-transparent text-white font-semibold hover:text-at-light-green py-2 px-4 my-2 w-full border border-transparent hover:border-at-light-green border-2 rounded"
+                type="submit"
+              >
+                Sign In
+              </button>
+              <!-- <input class="btnPrimary" type="submit" value="Sign In" /> -->
               <p v-if="errorMsg" class="errorMsg">{{ errorMsg }}.</p>
+              <p class="noacc">
+                <span class="font-normal opacity-50 mr-2"
+                  >Don't have an account?</span
+                ><PersonalRouter :route="route" :buttonText="buttonText" />
+              </p>
+              <div class="flex items-center justify-center my-10">
+                <img class="md:w-64" src="/public/loginwith.png" alt="" />
+              </div>
+              <div class="flex items-center justify-center">
+                <div
+                  class="flex bg-gray-400 text-center hover:bg-gray-300 text-white hover:text-gray-400 w-1/6 mx-5 w-10 h-10 items-center justify-center border border-transparent hover:border-gray-300 border-2 rounded"
+                >
+                  <i class="fa-brands fa-google"></i>
+                </div>
+                <div
+                  class="flex bg-gray-400 text-center hover:bg-gray-300 text-white hover:text-gray-400 w-1/6 mx-5 w-10 h-10 items-center justify-center border border-transparent hover:border-gray-300 border-2 rounded"
+                >
+                  <i class="fa-brands fa-github"></i>
+                </div>
+              </div>
             </form>
-            <p class="text-center">
-              <span class="font-medium">Don't have an account?</span
-              ><PersonalRouter :route="route" :buttonText="buttonText" />
-            </p>
           </div>
         </div>
       </div>
       <img
-        class="md:absolute md:top-0 md:right-0 mx-auto sm:h-full md:w-2/5 lg:w-1/2 md:object-cover animate__animated animate__fadeIn"
+        class="baseImg md:top-0 md:right-0 mx-auto sm:h-full md:w-2/5 lg:w-1/2 md:object-cover animate__animated animate__fadeIn"
         src="https://images.unsplash.com/photo-1596638787647-904d822d751e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1900&q=80"
         alt="LogIn img"
       />
@@ -65,6 +97,7 @@ import { supabase } from "../supabase";
 import { useRouter } from "vue-router";
 import { useUserStore } from "../stores/user";
 import { storeToRefs } from "pinia";
+import "animate.css";
 
 // Route Variables
 const route = "/auth/sign-up";
