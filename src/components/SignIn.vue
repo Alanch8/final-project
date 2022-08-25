@@ -81,7 +81,7 @@
         alt="LogIn img"
       />
       <div
-        class="absolute h-full z-10 right-0 text-white opacity-75 mx-5 my-5 py-5"
+        class="credits absolute h-full z-10 right-0 text-white opacity-75 mx-5 my-5 py-5"
       >
         <a
           class="flex items-center justify-center"
