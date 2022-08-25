@@ -51,7 +51,7 @@
       </div>
       <img
         class="md:absolute md:top-0 md:right-0 mx-auto sm:h-full md:w-2/5 lg:w-1/2 md:object-cover animate__animated animate__fadeIn"
-        src="/public/cristofer-maximilian-PP1yKpfA4HY-unsplash.jpeg"
+        src="https://images.unsplash.com/photo-1596638787647-904d822d751e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1900&q=80"
         alt="LogIn img"
       />
     </section>
