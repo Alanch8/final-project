@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-min">
     <section class="flex items-center h-screen relative pt16 bg-white">
-      <div class="container animate__animated animate__fadeIn">
+      <div class="container animate__animated animate__fadeIn animate__slow">
         <div>
           <div class="mb-6 text-center">
             <h3 class="appTitle">Log In to</h3>
@@ -39,13 +39,7 @@
                   /><span
                     class="z-10 h-full leading-snug font-normal text-center absolute bg-transparent rounded text-base items-center justify-center right-0 pr-4 py-6 opacity-25"
                     @click="changeHidePasswordValue"
-                    ><i
-                      :class="
-                        hidePassword.value
-                          ? 'fa-solid fa-eye'
-                          : 'fa-solid fa-eye-slash'
-                      "
-                    ></i
+                    ><i class="fa-solid fa-eye-slash"></i
                   ></span>
                 </div>
               </div>
@@ -82,10 +76,29 @@
         </div>
       </div>
       <img
-        class="baseImg md:top-0 md:right-0 mx-auto sm:h-full md:w-2/5 lg:w-1/2 md:object-cover animate__animated animate__fadeIn"
+        class="baseImg md:top-0 md:right-0 mx-auto sm:h-full md:w-2/5 lg:w-1/2 md:object-cover animate__animated animate__fadeIn animate__slow"
         src="https://images.unsplash.com/photo-1596638787647-904d822d751e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1900&q=80"
         alt="LogIn img"
       />
+      <div
+        class="absolute h-full z-10 right-0 text-white opacity-75 mx-5 my-5 py-5"
+      >
+        <a
+          class="flex items-center justify-center"
+          href="https://unsplash.com/es/fotos/PP1yKpfA4HY"
+          ><i class="fa-brands fa-unsplash mx-2 shadow"></i>
+          <p class="shadow">Cristofer Maximilian</p></a
+        >
+        <!-- <div class="flex items-center justify-center">
+          <i class="fa-brands fa-unsplash mx-2 shadow"></i>
+          <p class="shadow">Cristofer Maximilian</p>
+        </div> -->
+        <!-- <p>
+          z-10 h-full leading-snug font-normal text-center absolute
+          bg-transparent rounded text-base items-center justify-center right-0
+          pr-4 py-6 opacity-25
+        </p> -->
+      </div>
     </section>
   </div>
 </template>
