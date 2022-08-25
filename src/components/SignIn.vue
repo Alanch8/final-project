@@ -25,9 +25,7 @@
                 </div>
               </div>
               <div class="w-full mb-4">
-                <label class="inputFieldLabel w-full" for="password"
-                  >Password</label
-                >
+                <label class="inputFieldLabel" for="password">Password</label>
                 <div class="relative flex flex-wrap items-stretch">
                   <input
                     class="inputField w-full appearance-none focus:outline-none"
@@ -89,15 +87,6 @@
           ><i class="fa-brands fa-unsplash mx-2 shadow"></i>
           <p class="shadow">Cristofer Maximilian</p></a
         >
-        <!-- <div class="flex items-center justify-center">
-          <i class="fa-brands fa-unsplash mx-2 shadow"></i>
-          <p class="shadow">Cristofer Maximilian</p>
-        </div> -->
-        <!-- <p>
-          z-10 h-full leading-snug font-normal text-center absolute
-          bg-transparent rounded text-base items-center justify-center right-0
-          pr-4 py-6 opacity-25
-        </p> -->
       </div>
     </section>
   </div>

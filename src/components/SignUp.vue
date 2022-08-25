@@ -1,38 +1,102 @@
 <template>
-  <h1>Register to TaskApp</h1>
-  <p>Start Organizing your tasks today!</p>
-  <form @submit.prevent="signUp">
-    <label for="email">Email</label><br />
-    <input
-      type="email"
-      v-model="email"
-      placeholder="example@taskapp.com"
-      required
-    />
-    <br />
-    <label for="password">Password</label><br />
-    <input
-      type="password"
-      v-model="password"
-      placeholder="∙∙∙∙∙∙∙∙∙∙∙"
-      required
-    />
-    <br />
-    <label for="password">Confirm Password</label><br />
-    <input
-      type="password"
-      v-model="confirmPassword"
-      placeholder="∙∙∙∙∙∙∙∙∙∙∙"
-      required
-    />
-    <br />
-    <input type="submit" value="Sign Up" />
-    <p v-if="errorMsg" class="errorMsg">{{ errorMsg }}.</p>
-  </form>
-  <p>
-    <span>Have an account?</span
-    ><PersonalRouter :route="route" :buttonText="buttonText" />
-  </p>
+  <div class="min-h-min">
+    <section class="flex items-center h-screen relative pt16 bg-white">
+      <div class="container animate__animated animate__fadeIn animate__slow">
+        <div>
+          <div class="mb-6 text-center">
+            <h3 class="appTitle">Register to</h3>
+            <h2 class="appTitle-gradient">TaskApp</h2>
+            <p class="appSubtitle mb-10">Start Organizing your tasks today!</p>
+          </div>
+        </div>
+        <div class="w-1/2 mx-auto md:w-3/5 lg:w-1/2">
+          <div class="max-w-sm mx-auto">
+            <form @submit.prevent="signUp">
+              <div class="mb-4">
+                <label class="inputFieldLabel" for="email">Email</label>
+                <div>
+                  <input
+                    class="inputField w-full appearance-none focus:outline-none"
+                    type="email"
+                    v-model="email"
+                    placeholder="example@taskapp.com"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="w-full mb-4">
+                <label class="inputFieldLabel" for="password">Password</label>
+                <div>
+                  <input
+                    class="inputField w-full appearance-none focus:outline-none"
+                    type="password"
+                    v-model="password"
+                    placeholder="∙∙∙∙∙∙∙∙∙∙∙"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="w-full mb-4">
+                <div>
+                  <label class="inputFieldLabel" for="password"
+                    >Confirm Password</label
+                  >
+                  <input
+                    class="inputField w-full appearance-none focus:outline-none"
+                    type="password"
+                    v-model="confirmPassword"
+                    placeholder="∙∙∙∙∙∙∙∙∙∙∙"
+                    required
+                  />
+                </div>
+              </div>
+              <button
+                class="bg-at-light-green hover:bg-transparent text-white font-semibold hover:text-at-light-green py-2 px-4 my-2 w-full border border-transparent hover:border-at-light-green border-2 rounded"
+                type="submit"
+              >
+                Sign Up
+              </button>
+              <p v-if="errorMsg" class="errorMsg">{{ errorMsg }}.</p>
+              <p class="noacc">
+                <span class="font-normal opacity-50 mr-2">Have an account?</span
+                ><PersonalRouter :route="route" :buttonText="buttonText" />
+              </p>
+              <div class="flex items-center justify-center my-10">
+                <img class="md:w-64" src="/public/signupwith.png" alt="" />
+              </div>
+              <div class="flex items-center justify-center">
+                <div
+                  class="flex bg-gray-400 text-center hover:bg-gray-300 text-white hover:text-gray-400 w-1/6 mx-5 w-10 h-10 items-center justify-center border border-transparent hover:border-gray-300 border-2 rounded"
+                >
+                  <i class="fa-brands fa-google"></i>
+                </div>
+                <div
+                  class="flex bg-gray-400 text-center hover:bg-gray-300 text-white hover:text-gray-400 w-1/6 mx-5 w-10 h-10 items-center justify-center border border-transparent hover:border-gray-300 border-2 rounded"
+                >
+                  <i class="fa-brands fa-github"></i>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <img
+        class="baseImg md:top-0 md:right-0 mx-auto sm:h-full md:w-2/5 lg:w-1/2 md:object-cover animate__animated animate__fadeIn animate__slow"
+        src="https://images.unsplash.com/photo-1596638787647-904d822d751e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1900&q=80"
+        alt="LogIn img"
+      />
+      <div
+        class="credits absolute h-full z-10 right-0 text-white opacity-75 mx-5 my-5 py-5"
+      >
+        <a
+          class="flex items-center justify-center"
+          href="https://unsplash.com/es/fotos/PP1yKpfA4HY"
+          ><i class="fa-brands fa-unsplash mx-2 shadow"></i>
+          <p class="shadow">Cristofer Maximilian</p></a
+        >
+      </div>
+    </section>
+  </div>
 </template>
 
 <script setup>
