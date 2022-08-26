@@ -49,9 +49,9 @@
               class="text-black p-3 mr-1 rounded bg-transparent hover:bg-gray-100 hover:text-black"
               @click="completedTask"
             >
-              <p v-if="!item.is_complete">
+              <p v-if="item.is_complete">
                 <i
-                  class="fa-solid fa-check fa-lg text-green-500 opacity-75 hover:opacity-75"
+                  class="fa-solid fa-check text-green-500 fa-lg opacity-75 hover:opacity-75"
                 ></i>
               </p>
               <p v-else>
