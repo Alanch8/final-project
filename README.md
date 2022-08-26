@@ -1,6 +1,6 @@
 # Final Project: Task App
 
-![TaskApp](./public/taskapp-brand-logo.png)
+<img align="center" src="./public/taskapp-brand-logo.png" alt="TaskApp-Brand" width="200"/>
 
 ## Project Setup
 
@@ -86,7 +86,7 @@ We have improved this README to use it as documentation of the same.
 
 ## Final Result
 
-![TaskApp](https://final-project-alanch.vercel.app/)
+[TaskApp](https://final-project-alanch.vercel.app/)
 
 ### LogIn Screen
 
