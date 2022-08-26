@@ -102,34 +102,34 @@ Link to the Final Resul: [TaskApp](https://final-project-alanch.vercel.app/)
 
 ## Tech Stack
 
-<p>Client: Vue.js, Vite (dev server)</p> - <a href="https://vitejs.dev/" target="_blank" rel="noreferrer">
-      <img
+<span><a href="https://vitejs.dev/" target="_blank" rel="noreferrer">
+<img
         src="https://vitejs.dev/logo.svg"
         alt="vitejs"
         width="24"
       />
-    </a>
-<p>Router: Vue Router</p> - <a href="https://vuejs.org/" target="_blank" rel="noreferrer">
-      <img
-        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg"
+</a></span><p>Client: Vue.js, Vite (dev server)</p>
+<span><a href="https://vuejs.org/" target="_blank" rel="noreferrer">
+<img
+        src="https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg"
         alt="vuejs"
         width="24"
       />
-    </a>
-<p>Store: Pinia and Pinia Persist for persistent login</p> - <a href="https://pinia.vuejs.org/" target="_blank" rel="noreferrer">
-      <img
+</a></span><p>Router: Vue Router</p>
+<span><a href="https://pinia.vuejs.org/" target="_blank" rel="noreferrer">
+<img
         src="https://pinia.vuejs.org/logo.svg"
         alt="piniajs"
         width="24"
       />
-    </a>
-<p>Database as a service: Supabase</p> - <a href="https://supabase.com/" target="_blank" rel="noreferrer">
-      <img
+</a></span><p>Store: Pinia and Pinia Persist for persistent login</p>
+<span><a href="https://supabase.com/" target="_blank" rel="noreferrer">
+<img
         src="https://www.vectorlogo.zone/logos/supabase/supabase-icon.svg"
         alt="supabase"
         width="24"
       />
-    </a>
+</a></span><p>Database as a service: Supabase</p>
 
 <p align="right"><a href="#top">🔝</a></p>
 
