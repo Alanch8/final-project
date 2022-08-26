@@ -1,6 +1,6 @@
-# Final Project: Task App <img align="center" src="./public/taskapp-brand-logo.png" alt="TaskApp-Brand" width="200"/>
+<div id="top"></div>
 
-<img align="center" src="./public/taskapp-brand-logo.png" alt="TaskApp-Brand" width="200"/>
+# Final Project: <img align="center" src="./public/taskapp-brand-logo.png" alt="TaskApp-Brand" width="200"/>
 
 ## Project Setup
 
@@ -86,7 +86,7 @@ We have improved this README to use it as documentation of the same.
 
 ## Final Result
 
-[TaskApp](https://final-project-alanch.vercel.app/)
+Link to the Final Resul: [TaskApp](https://final-project-alanch.vercel.app/)
 
 ### LogIn Screen
 
@@ -99,5 +99,38 @@ We have improved this README to use it as documentation of the same.
 ### Home Screen
 
 ![Home](./public/screen-main.png)
+
+## Tech Stack
+
+<p>Client: Vue.js, Vite (dev server)</p> - <a href="https://vitejs.dev/" target="_blank" rel="noreferrer">
+      <img
+        src="https://vitejs.dev/logo.svg"
+        alt="vitejs"
+        width="24"
+      />
+    </a>
+<p>Router: Vue Router</p> - <a href="https://vuejs.org/" target="_blank" rel="noreferrer">
+      <img
+        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg"
+        alt="vuejs"
+        width="24"
+      />
+    </a>
+<p>Store: Pinia and Pinia Persist for persistent login</p> - <a href="https://pinia.vuejs.org/" target="_blank" rel="noreferrer">
+      <img
+        src="https://pinia.vuejs.org/logo.svg"
+        alt="piniajs"
+        width="24"
+      />
+    </a>
+<p>Database as a service: Supabase</p> - <a href="https://supabase.com/" target="_blank" rel="noreferrer">
+      <img
+        src="https://www.vectorlogo.zone/logos/supabase/supabase-icon.svg"
+        alt="supabase"
+        width="24"
+      />
+    </a>
+
+<p align="right"><a href="#top">🔝</a></p>
 
 <p align="center">Made with ❤️ and ☕️ by Aitor Lancharro</p>
