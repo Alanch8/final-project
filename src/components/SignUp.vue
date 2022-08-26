@@ -61,22 +61,6 @@
                 <span class="font-normal opacity-50 mr-2">Have an account?</span
                 ><PersonalRouter :route="route" :buttonText="buttonText" />
               </p>
-              <div class="flex items-center justify-center my-6">
-                <img class="w-64" src="/signupwith.png" alt="" />
-              </div>
-              <div class="flex items-center justify-center">
-                <div
-                  @click="signUpGoogle"
-                  class="flex bg-gray-400 text-center hover:bg-gray-300 text-white hover:text-gray-400 w-1/6 mx-5 w-10 h-10 items-center justify-center border border-transparent hover:border-gray-300 border-2 rounded"
-                >
-                  <i class="fa-brands fa-google"></i>
-                </div>
-                <div
-                  class="flex bg-gray-400 text-center hover:bg-gray-300 text-white hover:text-gray-400 w-1/6 mx-5 w-10 h-10 items-center justify-center border border-transparent hover:border-gray-300 border-2 rounded"
-                >
-                  <i class="fa-brands fa-github"></i>
-                </div>
-              </div>
             </form>
           </div>
         </div>
