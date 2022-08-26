@@ -1,4 +1,4 @@
-# Final Project: Task App
+# Final Project: Task App <img align="center" src="./public/taskapp-brand-logo.png" alt="TaskApp-Brand" width="200"/>
 
 <img align="center" src="./public/taskapp-brand-logo.png" alt="TaskApp-Brand" width="200"/>
 
