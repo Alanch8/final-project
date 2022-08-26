@@ -37,7 +37,8 @@
                   /><span
                     class="z-10 h-full leading-snug font-normal text-center absolute bg-transparent rounded text-base items-center justify-center right-0 pr-4 py-4 opacity-25"
                     @click="changeHidePasswordValue"
-                    ><i class="fa-solid fa-eye-slash"></i
+                    ><i v-if="hidePassword" class="fa-solid fa-eye-slash"></i
+                    ><i v-else class="fa-solid fa-eye"></i
                   ></span>
                 </div>
               </div>
