@@ -58,6 +58,7 @@
               </div>
               <div class="flex items-center justify-center">
                 <div
+                  @click="signInGoogle"
                   class="flex bg-gray-400 text-center hover:bg-gray-300 text-white hover:text-gray-400 w-1/6 mx-5 w-10 h-10 items-center justify-center border border-transparent hover:border-gray-300 border-2 rounded"
                 >
                   <i class="fa-brands fa-google"></i>
@@ -126,6 +127,17 @@ const signIn = async () => {
   try {
     await useUserStore().signIn(email.value, password.value);
     redirect.push({ path: "/" });
+  } catch (error) {
+    errorMsg.value = `Error: ${error.message}`;
+    setTimeout(() => {
+      errorMsg.value = null;
+    }, 5000);
+  }
+};
+const signInGoogle = async () => {
+  try {
+    await useUserStore().signInGoogle();
+    redirect.push({ path: "/auth/login" });
   } catch (error) {
     errorMsg.value = `Error: ${error.message}`;
     setTimeout(() => {

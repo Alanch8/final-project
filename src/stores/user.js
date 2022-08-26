@@ -21,6 +21,11 @@ export const useUserStore = defineStore("user", {
       }
       if (error) throw error;
     },
+    async signInGoogle() {
+      const { user, error } = await supabase.auth.signIn({
+        provider: "google",
+      });
+    },
     async signIn(email, password) {
       console.log(email, password);
       const { user, error } = await supabase.auth.signIn({
