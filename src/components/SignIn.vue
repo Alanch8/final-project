@@ -137,7 +137,7 @@ const signIn = async () => {
 const signInGoogle = async () => {
   try {
     await useUserStore().signInGoogle();
-    await redirect.push({ path: "/" });
+    /*     await redirect.push({ path: "/" }); */
   } catch (error) {
     errorMsg.value = `Error: ${error.message}`;
     setTimeout(() => {
