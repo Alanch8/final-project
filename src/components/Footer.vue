@@ -32,7 +32,6 @@
 <script setup>
 import moment from "moment";
 
-// Function to change the year automatically.
 const time = moment().format("YYYY");
 </script>
 
