@@ -26,6 +26,11 @@ export const useUserStore = defineStore("user", {
         provider: "google",
       });
     },
+    async signInGithub() {
+      const { user, error } = await supabase.auth.signIn({
+        provider: "github",
+      });
+    },
     async signIn(email, password) {
       console.log(email, password);
       const { user, error } = await supabase.auth.signIn({
