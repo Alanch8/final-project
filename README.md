@@ -108,28 +108,41 @@ Link to the Final Resul: [TaskApp](https://final-project-alanch.vercel.app/)
         alt="vitejs"
         width="24"
       />
-</a></span><p>Client: Vue.js, Vite (dev server)</p>
+</a></span>
 <span><a href="https://vuejs.org/" target="_blank" rel="noreferrer">
 <img
         src="https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg"
         alt="vuejs"
         width="24"
       />
-</a></span><p>Router: Vue Router</p>
+</a></span>
 <span><a href="https://pinia.vuejs.org/" target="_blank" rel="noreferrer">
 <img
         src="https://pinia.vuejs.org/logo.svg"
         alt="piniajs"
         width="24"
       />
-</a></span><p>Store: Pinia and Pinia Persist for persistent login</p>
+</a></span>
 <span><a href="https://supabase.com/" target="_blank" rel="noreferrer">
 <img
         src="https://www.vectorlogo.zone/logos/supabase/supabase-icon.svg"
         alt="supabase"
         width="24"
       />
-</a></span><p>Database as a service: Supabase</p>
+</a></span>
+<span><a href="https://tailwindcss.com/" target="_blank" rel="noreferrer">
+<img
+        src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg"
+        alt="tailwindcss"
+        width="24"
+      />
+</a></span>
+
+<p>- Client: Vue.js, Vite (dev server)</p>
+<p>- Router: Vue Router</p>
+<p>- Store: Pinia and Pinia Persist for persistent login</p>
+<p>- Database as a service: Supabase</p>
+<p>- CSS framework: Tailwindcss</p>
 
 <p align="right"><a href="#top">🔝</a></p>
 
