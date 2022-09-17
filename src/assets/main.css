@@ -48,6 +48,7 @@ html {
 .inputField {
   padding: 11px 20px;
   margin: 1px 0 0 0;
+  padding-left: 50px;
   box-sizing: border-box;
   background-color: #ebeaea40;
   color: #213547;

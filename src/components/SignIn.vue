@@ -14,8 +14,11 @@
             <form @submit.prevent="signIn">
               <div class="mb-2">
                 <label class="inputFieldLabel" for="email">Email</label>
-                <div>
-                  <input
+                <div class="relative flex flex-wrap items-stretch">
+                  <span
+                    class="z-10 h-full leading-snug font-normal text-center absolute bg-transparent rounded text-base items-center justify-center left-0 pl-5 py-4 opacity-25"
+                    ><i class="fa-solid fa-user"></i></span
+                  ><input
                     class="inputField w-full appearance-none focus:outline-none"
                     type="email"
                     v-model="email"
@@ -27,6 +30,10 @@
               <div class="mb-2">
                 <label class="inputFieldLabel" for="password">Password</label>
                 <div class="relative flex flex-wrap items-stretch">
+                  <span
+                    class="z-10 h-full leading-snug font-normal text-center absolute bg-transparent rounded text-base items-center justify-center left-0 pl-5 py-4 opacity-25"
+                    ><i class="fa-solid fa-lock"></i
+                  ></span>
                   <input
                     class="inputField w-full appearance-none focus:outline-none"
                     :type="passwordFieldType"

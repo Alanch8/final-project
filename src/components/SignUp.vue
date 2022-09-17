@@ -14,7 +14,11 @@
             <form @submit.prevent="signUp">
               <div class="mb-2">
                 <label class="inputFieldLabel" for="email">Email</label>
-                <div>
+                <div class="relative flex flex-wrap items-stretch">
+                  <span
+                    class="z-10 h-full leading-snug font-normal text-center absolute bg-transparent rounded text-base items-center justify-center left-0 pl-5 py-4 opacity-25"
+                    ><i class="fa-solid fa-user"></i
+                  ></span>
                   <input
                     class="inputField w-full appearance-none focus:outline-none"
                     type="email"
@@ -26,8 +30,11 @@
               </div>
               <div class="mb-2">
                 <label class="inputFieldLabel" for="password">Password</label>
-                <div>
-                  <input
+                <div class="relative flex flex-wrap items-stretch">
+                  <span
+                    class="z-10 h-full leading-snug font-normal text-center absolute bg-transparent rounded text-base items-center justify-center left-0 pl-5 py-4 opacity-25"
+                    ><i class="fa-solid fa-lock"></i></span
+                  ><input
                     class="inputField w-full appearance-none focus:outline-none"
                     type="password"
                     v-model="password"
@@ -37,11 +44,14 @@
                 </div>
               </div>
               <div class="mb-2">
-                <div>
-                  <label class="inputFieldLabel" for="password"
-                    >Confirm Password</label
-                  >
-                  <input
+                <label class="inputFieldLabel" for="password"
+                  >Confirm Password</label
+                >
+                <div class="relative flex flex-wrap items-stretch">
+                  <span
+                    class="z-10 h-full leading-snug font-normal text-center absolute bg-transparent rounded text-base items-center justify-center left-0 pl-5 py-4 opacity-25"
+                    ><i class="fa-solid fa-lock"></i></span
+                  ><input
                     class="inputField w-full appearance-none focus:outline-none"
                     type="password"
                     v-model="confirmPassword"
